@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notícia | Faculdade FAEDI</title>
+  <meta name="description" content="Página de leitura das notícias e atualidades da Faculdade FAEDI.">
+  <meta name="robots" content="index, follow" data-news-robots>
+  <meta property="og:title" content="Notícia | Faculdade FAEDI" data-news-meta="title">
+  <meta property="og:description" content="Página de leitura das notícias e atualidades da Faculdade FAEDI." data-news-meta="description">
+  <meta property="og:type" content="website" data-news-meta="type">
+  <meta property="og:image" content="images/optimized/faedi-social-1200.jpg" data-news-meta="image" data-seo-url>
+  <meta property="og:image:alt" content="Banner institucional da Faculdade FAEDI" data-news-meta="image-alt">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Faculdade FAEDI">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Notícia | Faculdade FAEDI" data-news-meta="twitter-title">
+  <meta name="twitter:description" content="Página de leitura das notícias e atualidades da Faculdade FAEDI." data-news-meta="twitter-description">
+  <meta name="twitter:image" content="images/optimized/faedi-social-1200.jpg" data-news-meta="twitter-image" data-seo-url>
+  <meta name="twitter:image:alt" content="Banner institucional da Faculdade FAEDI" data-news-meta="twitter-image-alt">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="css/faedi.css">
+</head>
+<body class="news-page news-article-page" data-page="noticia">
+  <div data-faedi-layout="header"></div>
+  <div data-faedi-layout="search"></div>
+
+  <main class="news-article-main">
+    <!-- Conteúdo da notícia será inserido aqui via JavaScript -->
+    <div id="noticia-container" class="news-article-container">
+      <div class="news-article-state news-article-state--loading" role="status">
+        <h1 class="sr-only">Notícia FAEDI</h1>
+        <i class="fas fa-spinner fa-spin" aria-hidden="true"></i>
+        <p>Carregando notícia...</p>
+      </div>
+    </div>
+  </main>
+
+  <div data-faedi-layout="floating"></div>
+  <div data-faedi-layout="footer"></div>
+
+  <script src="js/faedi-layout.js" defer></script>
+  <script src="js/search-index.js" defer></script>
+  <script src="js/faedi.js" defer></script>
+  <script>
+    // Base de dados das notícias
+    const noticias = [
+      {
+        id: 1,
+        titulo: "FAEDI lança novo programa de bolsas de estudo para alunos de baixa renda",
+        data: "15 de abril de 2026",
+        autor: "Assessoria de Comunicação FAEDI",
+        categoria: "academico",
+        imagem: "images/banner-secundario.png",
+        resumo: "A Faculdade FAEDI anuncia a implementação de um programa inovador de bolsas de estudo, visando democratizar o acesso ao ensino superior de qualidade na região de Ipu.",
+        conteudo: `
+          <p>A Faculdade FAEDI tem o prazer de anunciar o lançamento do <strong>Programa Bolsa FAEDI</strong>, uma iniciativa pioneira que visa democratizar o acesso ao ensino superior de qualidade na região de Ipu e entorno.</p>
+
+          <h2>Objetivos do Programa</h2>
+          <p>O programa tem como principais objetivos:</p>
+          <ul>
+            <li>Reduzir barreiras financeiras ao ensino superior</li>
+            <li>Promover a inclusão social através da educação</li>
+            <li>Valorizar o mérito acadêmico e o compromisso social</li>
+            <li>Contribuir para o desenvolvimento regional</li>
+          </ul>
+
+          <h2>Como Funciona</h2>
+          <p>Os estudantes interessados devem se inscrever através do processo seletivo regular da instituição. As bolsas serão concedidas com base em critérios socioeconômicos e acadêmicos, abrangendo até 30% do valor da mensalidade.</p>
+
+          <h2>Benefícios Oferecidos</h2>
+          <p>Além da redução no valor das mensalidades, os bolsistas terão acesso a:</p>
+          <ul>
+            <li>Orientação acadêmica especializada</li>
+            <li>Participação em programas de iniciação científica</li>
+            <li>Oportunidades de estágio remunerado</li>
+            <li>Participação em eventos e congressos</li>
+          </ul>
+
+          <p>Esta iniciativa reforça o compromisso da FAEDI com a educação inclusiva e o desenvolvimento sustentável da região.</p>
+        `
+      },
+      {
+        id: 2,
+        titulo: "Workshop reúne estudantes e empresários para discutir mercado de trabalho",
+        data: "12 de abril de 2026",
+        autor: "Coordenação de Extensão FAEDI",
+        categoria: "eventos",
+        imagem: "images/logo-faedi.png",
+        resumo: "Evento promoveu networking e troca de experiências entre alunos e profissionais da região.",
+        conteudo: `
+          <p>O Workshop "Carreira e Mercado de Trabalho" realizado pela Faculdade FAEDI reuniu mais de 150 estudantes e 20 empresários da região de Ipu para uma tarde de networking e troca de experiências.</p>
+
+          <h2>Programação do Evento</h2>
+          <p>O workshop contou com palestras sobre:</p>
+          <ul>
+            <li>Tendências do mercado de trabalho</li>
+            <li>Importância da formação acadêmica</li>
+            <li>Habilidades valorizadas pelas empresas</li>
+            <li>Empreendedorismo jovem</li>
+          </ul>
+
+          <h2>Palestrantes</h2>
+          <p>Dentre os palestrantes destacaram-se:</p>
+          <ul>
+            <li><strong>Maria Silva</strong> - CEO da TechCorp Ipu</li>
+            <li><strong>João Santos</strong> - Diretor da Indústria Local</li>
+            <li><strong>Ana Costa</strong> - Consultora de RH</li>
+          </ul>
+
+          <p>Os participantes elogiaram a organização do evento e a qualidade dos conteúdos apresentados.</p>
+        `
+      },
+      {
+        id: 3,
+        titulo: "Novo laboratório de odontologia é inaugurado com equipamentos de ponta",
+        data: "10 de abril de 2026",
+        autor: "Coordenação do Curso de Odontologia",
+        categoria: "academico",
+        imagem: "images/logo-faedi.png",
+        resumo: "Investimento de R$ 500 mil em tecnologia para formação prática dos estudantes de Odontologia.",
+        conteudo: `
+          <p>A Faculdade FAEDI inaugurou nesta semana seu novo laboratório de Odontologia, equipado com tecnologia de ponta para oferecer aos estudantes uma formação prática de excelência.</p>
+
+          <h2>Investimento Realizado</h2>
+          <p>O investimento total de R$ 500 mil incluiu:</p>
+          <ul>
+            <li>Equipamentos odontológicos modernos</li>
+            <li>Sistema de raio-X digital</li>
+            <li>Laboratório de prótese dentária</li>
+            <li>Software de simulação clínica</li>
+          </ul>
+
+          <h2>Benefícios para os Estudantes</h2>
+          <p>Com o novo laboratório, os estudantes terão acesso a:</p>
+          <ul>
+            <li>Prática supervisionada em ambiente realista</li>
+            <li>Tecnologia atualizada conforme padrões internacionais</li>
+            <li>Formação mais completa e competitiva</li>
+            <li>Oportunidades de pesquisa e inovação</li>
+          </ul>
+
+          <p>A coordenadora do curso, Profa. Dra. Carla Mendes, destacou a importância deste investimento para a qualidade da formação oferecida pela FAEDI.</p>
+        `
+      },
+      {
+        id: 4,
+        titulo: "FAEDI participa de feira educacional em Fortaleza",
+        data: "8 de abril de 2026",
+        autor: "Assessoria de Comunicação FAEDI",
+        categoria: "eventos",
+        imagem: "images/logo-faedi.png",
+        resumo: "Instituição apresentou seus cursos e oportunidades de ingresso para milhares de visitantes.",
+        conteudo: `
+          <p>A Faculdade FAEDI participou da 15ª Feira de Educação Superior de Fortaleza, um dos maiores eventos educacionais do Nordeste, onde apresentou seus cursos e oportunidades de ingresso para milhares de visitantes.</p>
+
+          <h2>Atividades Realizadas</h2>
+          <p>Durante os três dias de evento, a FAEDI:</p>
+          <ul>
+            <li>Realizou palestras sobre os cursos oferecidos</li>
+            <li>Distribuiu material informativo</li>
+            <li>Atendeu candidatos interessados em ingressar</li>
+            <li>Participou de painéis sobre educação superior</li>
+          </ul>
+
+          <h2>Cursos em Destaque</h2>
+          <p>Os cursos mais procurados foram:</p>
+          <ul>
+            <li>Psicologia</li>
+            <li>Direito</li>
+            <li>Enfermagem</li>
+            <li>Odontologia</li>
+          </ul>
+
+          <p>A participação na feira reforçou a presença da FAEDI no cenário educacional cearense e gerou grande interesse por parte dos estudantes.</p>
+        `
+      },
+      {
+        id: 5,
+        titulo: "Projeto de extensão beneficia comunidade local com atendimento gratuito",
+        data: "5 de abril de 2026",
+        autor: "Coordenação de Extensão FAEDI",
+        categoria: "comunidade",
+        imagem: "images/logo-faedi.png",
+        resumo: "Estudantes de Enfermagem e Odontologia oferecem serviços à população de Ipu.",
+        conteudo: `
+          <p>O Projeto de Extensão "FAEDI na Comunidade" realizou mais uma ação social em Ipu, oferecendo atendimento gratuito em enfermagem e odontologia para a população local.</p>
+
+          <h2>Serviços Oferecidos</h2>
+          <p>Foram realizados:</p>
+          <ul>
+            <li>Consultas odontológicas preventivas</li>
+            <li>Aferição de pressão arterial</li>
+            <li>Medição de glicemia</li>
+            <li>Orientações sobre saúde bucal</li>
+            <li>Distribuição de kits de higiene</li>
+          </ul>
+
+          <h2>Participação dos Estudantes</h2>
+          <p>Mais de 30 estudantes dos cursos de Enfermagem e Odontologia participaram da ação, sob supervisão dos professores coordenadores.</p>
+
+          <p>O projeto visa integrar o aprendizado acadêmico com a prática social, contribuindo para o desenvolvimento da comunidade e formando profissionais mais conscientes de sua responsabilidade social.</p>
+        `
+      },
+      {
+        id: 6,
+        titulo: "FAEDI implementa nova plataforma digital para aulas interativas",
+        data: "3 de abril de 2026",
+        autor: "Coordenação de Tecnologia FAEDI",
+        categoria: "inovacao",
+        imagem: "images/logo-faedi.png",
+        resumo: "Tecnologia inovadora permite aulas mais dinâmicas e participação ativa dos estudantes.",
+        conteudo: `
+          <p>A Faculdade FAEDI implementou uma nova plataforma digital que revoluciona a experiência de aprendizado, permitindo aulas mais interativas e dinâmicas.</p>
+
+          <h2>Recursos da Plataforma</h2>
+          <p>A nova ferramenta oferece:</p>
+          <ul>
+            <li>Aulas interativas com quizzes em tempo real</li>
+            <li>Gravação automática das aulas</li>
+            <li>Chat integrado para dúvidas</li>
+            <li>Compartilhamento de materiais digitais</li>
+            <li>Análises de desempenho dos estudantes</li>
+          </ul>
+
+          <h2>Benefícios</h2>
+          <p>Os principais benefícios incluem:</p>
+          <ul>
+            <li>Maior engajamento dos estudantes</li>
+            <li>Flexibilidade no acesso ao conteúdo</li>
+            <li>Personalização do aprendizado</li>
+            <li>Melhor acompanhamento do progresso</li>
+          </ul>
+
+          <p>A plataforma foi desenvolvida em parceria com empresas de tecnologia educacional e já está sendo utilizada em todos os cursos da instituição.</p>
+        `
+      },
+      {
+        id: 7,
+        titulo: "Grupo de pesquisa da FAEDI publica artigo em revista internacional",
+        data: "1 de abril de 2026",
+        autor: "Coordenação de Pesquisa FAEDI",
+        categoria: "academico",
+        imagem: "images/logo-faedi.png",
+        resumo: "Trabalho sobre saúde mental ganha reconhecimento da comunidade científica.",
+        conteudo: `
+          <p>Um grupo de pesquisadores da Faculdade FAEDI teve seu trabalho sobre saúde mental publicado em uma revista internacional de grande prestígio.</p>
+
+          <h2>Sobre a Pesquisa</h2>
+          <p>O estudo "Impactos da Pandemia na Saúde Mental dos Jovens" analisou os efeitos da pandemia de COVID-19 na saúde mental de jovens universitários, com foco em estratégias de coping e resiliência.</p>
+
+          <h2>Participantes</h2>
+          <p>A pesquisa contou com a participação de:</p>
+          <ul>
+            <li>Prof. Dr. Roberto Lima (coordenador)</li>
+            <li>Profa. Dra. Ana Paula Santos</li>
+            <li>Estudantes de Psicologia e Medicina</li>
+          </ul>
+
+          <h2>Resultados</h2>
+          <p>Os principais achados incluem:</p>
+          <ul>
+            <li>Identificação de fatores de risco para transtornos mentais</li>
+            <li>Desenvolvimento de estratégias preventivas</li>
+            <li>Importância do apoio institucional</li>
+          </ul>
+
+          <p>Esta publicação reforça o compromisso da FAEDI com a produção de conhecimento científico de qualidade.</p>
+        `
+      },
+      {
+        id: 8,
+        titulo: "Semana acadêmica reúne palestrantes renomados",
+        data: "28 de março de 2026",
+        autor: "Coordenação de Eventos FAEDI",
+        categoria: "eventos",
+        imagem: "images/logo-faedi.png",
+        resumo: "Evento contou com participação de especialistas em diversas áreas do conhecimento.",
+        conteudo: `
+          <p>A Semana Acadêmica FAEDI 2026 reuniu palestrantes renomados e contou com a participação de mais de 500 pessoas entre estudantes, professores e comunidade externa.</p>
+
+          <h2>Temas Abordados</h2>
+          <p>A programação incluiu palestras sobre:</p>
+          <ul>
+            <li>Inovação em Educação Superior</li>
+            <li>Sustentabilidade e Desenvolvimento</li>
+            <li>Tecnologia e Sociedade</li>
+            <li>Saúde Mental no Século XXI</li>
+            <li>Empreendedorismo Social</li>
+          </ul>
+
+          <h2>Palestrantes Convidados</h2>
+          <p>Dentre os destaques:</p>
+          <ul>
+            <li><strong>Dr. Carlos Eduardo</strong> - Universidade Federal do Ceará</li>
+            <li><strong>Profa. Maria José</strong> - USP São Paulo</li>
+            <li><strong>Dr. Roberto Santos</strong> - Fiocruz Rio</li>
+          </ul>
+
+          <h2>Atividades Paralelas</h2>
+          <p>Além das palestras, foram realizadas:</p>
+          <ul>
+            <li>Oficinas temáticas</li>
+            <li>Apresentação de trabalhos científicos</li>
+            <li>Feira de projetos de extensão</li>
+            <li>Espetáculos culturais</li>
+          </ul>
+
+          <p>A Semana Acadêmica consolidou-se como um importante espaço de diálogo e troca de conhecimentos na região.</p>
+        `
+      }
+    ];
+
+    // Permite que a busca compartilhada reaproveite os dados quando esta página estiver aberta.
+    window.FaediNewsDocuments = noticias;
+
+    // Função para obter notícias relacionadas
+    function getNoticiasRelacionadas(noticiaAtual, limite = 3) {
+      return noticias
+        .filter(n => n.id !== noticiaAtual.id && n.categoria === noticiaAtual.categoria)
+        .slice(0, limite);
+    }
+
+    // Identifica mídias institucionais para evitar recorte da marca.
+    function isLogoFaedi(imagePath) {
+      return /(?:^|\/)logo-faedi\.png(?:[?#]|$)/i.test(imagePath);
+    }
+
+    function isSecondaryBanner(imagePath) {
+      return /(?:^|\/)banner-secundario\.png(?:[?#]|$)/i.test(imagePath);
+    }
+
+    function getOptimizedContentImagePath(imagePath) {
+      return isSecondaryBanner(imagePath)
+        ? 'images/optimized/banner-secundario-1920.webp'
+        : imagePath;
+    }
+
+    function renderResponsiveNewsImage(imagePath, alt, loading = 'lazy', sizes = '100vw') {
+      if (isLogoFaedi(imagePath)) {
+        return `<img src="${imagePath}" alt="${alt}" width="484" height="181" loading="${loading}" decoding="async">`;
+      }
+
+      if (isSecondaryBanner(imagePath)) {
+        return `
+          <picture>
+            <source
+              type="image/webp"
+              srcset="images/optimized/banner-secundario-768.webp 768w, images/optimized/banner-secundario-1280.webp 1280w, images/optimized/banner-secundario-1920.webp 1920w"
+              sizes="${sizes}"
+            >
+            <img src="${imagePath}" alt="${alt}" width="8000" height="3431" loading="${loading}" decoding="async">
+          </picture>
+        `;
+      }
+
+      return `<img src="${imagePath}" alt="${alt}" loading="${loading}" decoding="async">`;
+    }
+
+    function setMetaContent(selector, content) {
+      const meta = document.querySelector(selector);
+
+      if (meta && content) {
+        meta.setAttribute('content', content);
+      }
+    }
+
+    function getIsoPublicationDate(displayDate) {
+      const monthNames = {
+        janeiro: '01',
+        fevereiro: '02',
+        marco: '03',
+        abril: '04',
+        maio: '05',
+        junho: '06',
+        julho: '07',
+        agosto: '08',
+        setembro: '09',
+        outubro: '10',
+        novembro: '11',
+        dezembro: '12'
+      };
+      const normalizedDate = displayDate
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .toLocaleLowerCase('pt-BR');
+      const match = normalizedDate.match(/^(\d{1,2}) de ([a-z]+) de (\d{4})$/);
+
+      if (!match || !monthNames[match[2]]) {
+        return '';
+      }
+
+      return `${match[3]}-${monthNames[match[2]]}-${match[1].padStart(2, '0')}`;
+    }
+
+    function removeNewsStructuredData() {
+      document.getElementById('news-structured-data')?.remove();
+    }
+
+    function updateNewsSeo(noticia) {
+      const pageTitle = `${noticia.titulo} | Faculdade FAEDI`;
+      const imageUrl = new URL(getOptimizedContentImagePath(noticia.imagem), document.baseURI).href;
+      const socialImageUrl = new URL('images/optimized/faedi-social-1200.jpg', document.baseURI).href;
+      const imageAlt = isLogoFaedi(noticia.imagem)
+        ? 'Marca institucional da Faculdade FAEDI'
+        : noticia.titulo;
+      const publicationDate = getIsoPublicationDate(noticia.data);
+      const pageUrl = window.location.href;
+
+      document.title = pageTitle;
+      setMetaContent('meta[name="description"]', noticia.resumo);
+      setMetaContent('[data-news-robots]', 'index, follow');
+      setMetaContent('[data-news-meta="title"]', pageTitle);
+      setMetaContent('[data-news-meta="description"]', noticia.resumo);
+      setMetaContent('[data-news-meta="type"]', 'article');
+      setMetaContent('[data-news-meta="image"]', socialImageUrl);
+      setMetaContent('[data-news-meta="image-alt"]', imageAlt);
+      setMetaContent('[data-news-meta="twitter-title"]', pageTitle);
+      setMetaContent('[data-news-meta="twitter-description"]', noticia.resumo);
+      setMetaContent('[data-news-meta="twitter-image"]', socialImageUrl);
+      setMetaContent('[data-news-meta="twitter-image-alt"]', imageAlt);
+
+      const newsArticle = {
+        '@type': 'NewsArticle',
+        headline: noticia.titulo,
+        description: noticia.resumo,
+        image: [imageUrl],
+        author: {
+          '@type': 'Organization',
+          name: noticia.autor
+        },
+        publisher: {
+          '@type': 'CollegeOrUniversity',
+          name: 'Faculdade FAEDI',
+          logo: {
+            '@type': 'ImageObject',
+            url: new URL('images/logo-faedi.png', document.baseURI).href,
+            width: 484,
+            height: 181
+          }
+        },
+        mainEntityOfPage: {
+          '@type': 'WebPage',
+          '@id': pageUrl
+        }
+      };
+
+      if (publicationDate) {
+        newsArticle.datePublished = publicationDate;
+      }
+
+      const structuredData = {
+        '@context': 'https://schema.org',
+        '@graph': [
+          newsArticle,
+          {
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Faculdade FAEDI',
+                item: new URL('index.html', document.baseURI).href
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Notícias',
+                item: new URL('noticias.html', document.baseURI).href
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: noticia.titulo
+              }
+            ]
+          }
+        ]
+      };
+      const script = document.createElement('script');
+      script.id = 'news-structured-data';
+      script.type = 'application/ld+json';
+      script.textContent = JSON.stringify(structuredData);
+      removeNewsStructuredData();
+      document.head.append(script);
+    }
+
+    function updateNewsErrorSeo() {
+      const pageTitle = 'Notícia não encontrada | Faculdade FAEDI';
+      const description = 'A notícia solicitada não foi encontrada na área de notícias da Faculdade FAEDI.';
+
+      document.title = pageTitle;
+      setMetaContent('meta[name="description"]', description);
+      setMetaContent('[data-news-robots]', 'noindex, follow');
+      setMetaContent('[data-news-meta="title"]', pageTitle);
+      setMetaContent('[data-news-meta="description"]', description);
+      setMetaContent('[data-news-meta="type"]', 'website');
+      setMetaContent('[data-news-meta="twitter-title"]', pageTitle);
+      setMetaContent('[data-news-meta="twitter-description"]', description);
+      removeNewsStructuredData();
+    }
+
+    function renderizarNavegacao(noticiaAnterior, proximaNoticia) {
+      const linkAnterior = noticiaAnterior
+        ? `
+          <a href="noticia.html?id=${noticiaAnterior.id}" class="news-article-nav-link" aria-label="Ler notícia anterior: ${noticiaAnterior.titulo}">
+            <i class="fas fa-chevron-left" aria-hidden="true"></i>
+            Notícia Anterior
+          </a>
+        `
+        : `
+          <span class="news-article-nav-link is-disabled" aria-disabled="true">
+            <i class="fas fa-chevron-left" aria-hidden="true"></i>
+            Notícia Anterior
+          </span>
+        `;
+
+      const linkProximo = proximaNoticia
+        ? `
+          <a href="noticia.html?id=${proximaNoticia.id}" class="news-article-nav-link" aria-label="Ler próxima notícia: ${proximaNoticia.titulo}">
+            Próxima Notícia
+            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+          </a>
+        `
+        : `
+          <span class="news-article-nav-link is-disabled" aria-disabled="true">
+            Próxima Notícia
+            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+          </span>
+        `;
+
+      return `
+        <nav class="news-article-navigation" aria-label="Navegação entre notícias">
+          ${linkAnterior}
+          <a href="noticias.html" class="news-article-nav-link" aria-label="Voltar para todas as notícias">
+            <i class="fas fa-list" aria-hidden="true"></i>
+            Todas as Notícias
+          </a>
+          ${linkProximo}
+        </nav>
+      `;
+    }
+
+    function renderizarEstadoErro(message) {
+      return `
+        <section class="news-article-state news-article-state--error" role="alert">
+          <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+          <h1>Notícia não encontrada</h1>
+          <p>${message}</p>
+          <a href="noticias.html" class="news-article-state-link">Voltar para Notícias</a>
+        </section>
+      `;
+    }
+
+    // Função para renderizar a notícia
+    function renderizarNoticia(noticia) {
+      const relacionadas = getNoticiasRelacionadas(noticia);
+      const currentIndex = noticias.findIndex(item => item.id === noticia.id);
+      const noticiaAnterior = currentIndex > 0 ? noticias[currentIndex - 1] : null;
+      const proximaNoticia = currentIndex < noticias.length - 1 ? noticias[currentIndex + 1] : null;
+      const mainMediaType = isLogoFaedi(noticia.imagem) ? 'brand' : 'editorial';
+      const mainImageAlt = mainMediaType === 'brand' ? 'Marca institucional da Faculdade FAEDI' : '';
+
+      const html = `
+        <article class="news-article">
+          <header class="news-article-hero">
+            <div class="news-article-hero-shell">
+              <h1>${noticia.titulo}</h1>
+              <p class="news-article-summary">${noticia.resumo}</p>
+              <div class="news-article-meta">
+                <div class="news-article-meta-item">
+                  <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                  <span class="sr-only">Data:</span>
+                  <span>${noticia.data}</span>
+                </div>
+                <div class="news-article-meta-item">
+                  <i class="fas fa-user" aria-hidden="true"></i>
+                  <span class="sr-only">Autoria:</span>
+                  <span>${noticia.autor}</span>
+                </div>
+                <div class="news-article-meta-item">
+                  <i class="fas fa-tag" aria-hidden="true"></i>
+                  <span class="sr-only">Categoria:</span>
+                  <span>${noticia.categoria.charAt(0).toUpperCase() + noticia.categoria.slice(1)}</span>
+                </div>
+              </div>
+            </div>
+          </header>
+
+          <div class="news-article-content">
+            <figure class="news-article-media news-article-media--${mainMediaType}">
+              ${renderResponsiveNewsImage(noticia.imagem, mainImageAlt, 'eager', '(max-width: 860px) calc(100vw - 2rem), 840px')}
+            </figure>
+
+            <div class="news-article-copy">
+              ${noticia.conteudo}
+            </div>
+
+            <aside class="news-article-share" aria-labelledby="news-share-title">
+              <h2 id="news-share-title">Compartilhar esta notícia</h2>
+              <div class="news-article-share-actions">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}" target="_blank" rel="noopener noreferrer" class="news-share-link news-share-link--facebook" aria-label="Compartilhar esta notícia no Facebook (abre em nova aba)">
+                  <i class="fab fa-facebook-f" aria-hidden="true"></i> Facebook
+                </a>
+                <a href="https://twitter.com/intent/tweet?url=${encodeURIComponent(window.location.href)}&text=${encodeURIComponent(noticia.titulo)}" target="_blank" rel="noopener noreferrer" class="news-share-link news-share-link--twitter" aria-label="Compartilhar esta notícia no Twitter (abre em nova aba)">
+                  <i class="fab fa-twitter" aria-hidden="true"></i> Twitter
+                </a>
+                <a href="https://wa.me/?text=${encodeURIComponent(noticia.titulo + ' ' + window.location.href)}" target="_blank" rel="noopener noreferrer" class="news-share-link news-share-link--whatsapp" aria-label="Compartilhar esta notícia no WhatsApp (abre em nova aba)">
+                  <i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp
+                </a>
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}" target="_blank" rel="noopener noreferrer" class="news-share-link news-share-link--linkedin" aria-label="Compartilhar esta notícia no LinkedIn (abre em nova aba)">
+                  <i class="fab fa-linkedin-in" aria-hidden="true"></i> LinkedIn
+                </a>
+              </div>
+            </aside>
+
+            ${renderizarNavegacao(noticiaAnterior, proximaNoticia)}
+          </div>
+
+          ${relacionadas.length > 0 ? `
+            <section class="news-related" aria-labelledby="news-related-title">
+              <div class="news-related-shell">
+                <h2 id="news-related-title">Notícias Relacionadas</h2>
+                <div class="news-related-grid">
+                  ${relacionadas.map(rel => {
+                    const relatedMediaType = isLogoFaedi(rel.imagem) ? 'brand' : 'editorial';
+
+                    return `
+                      <a href="noticia.html?id=${rel.id}" class="news-related-card">
+                        <div class="news-related-media news-related-media--${relatedMediaType}">
+                          ${renderResponsiveNewsImage(rel.imagem, '', 'lazy', '(max-width: 560px) calc(100vw - 2rem), 340px')}
+                        </div>
+                        <div class="news-related-card-content">
+                          <h3>${rel.titulo}</h3>
+                          <div class="news-related-meta">
+                            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                            <span>${rel.data}</span>
+                          </div>
+                        </div>
+                      </a>
+                    `;
+                  }).join('')}
+                </div>
+              </div>
+            </section>
+          ` : ''}
+        </article>
+      `;
+
+      return html;
+    }
+
+    // Função principal
+    document.addEventListener('DOMContentLoaded', function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const rawNewsId = urlParams.get('id');
+      const isStrictNewsId = rawNewsId !== null
+        && /^[1-9]\d*$/.test(rawNewsId)
+        && Number.isSafeInteger(Number(rawNewsId));
+
+      if (!isStrictNewsId) {
+        updateNewsErrorSeo();
+        document.getElementById('noticia-container').innerHTML = renderizarEstadoErro(
+          'O ID da notícia não foi especificado ou é inválido.'
+        );
+        return;
+      }
+
+      const noticiaId = Number(rawNewsId);
+
+      const noticia = noticias.find(n => n.id === noticiaId);
+
+      if (!noticia) {
+        updateNewsErrorSeo();
+        document.getElementById('noticia-container').innerHTML = renderizarEstadoErro(
+          'A notícia solicitada não existe ou foi removida.'
+        );
+        return;
+      }
+
+      // Renderizar a notícia
+      document.getElementById('noticia-container').innerHTML = renderizarNoticia(noticia);
+
+      // Atualizar metadados da notícia válida.
+      updateNewsSeo(noticia);
+    });
+  </script>
+</body>
+</html>

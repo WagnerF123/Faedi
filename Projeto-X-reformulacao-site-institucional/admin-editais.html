@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Administra&ccedil;&atilde;o de Editais | FAEDI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/faedi.css">
+  <link rel="stylesheet" href="css/admin-editais.css">
+</head>
+<body class="admin-editais-page">
+  <main class="admin-shell">
+    <section class="admin-access" data-admin-access aria-live="polite">
+      <span class="admin-mark">FAEDI</span>
+      <h1>Verificando acesso administrativo</h1>
+      <p>Esta &aacute;rea &eacute; restrita a usu&aacute;rios autorizados.</p>
+    </section>
+
+    <section class="admin-dashboard" data-admin-dashboard hidden>
+      <header class="admin-header">
+        <div>
+          <a class="admin-brand" href="index.html">FAEDI</a>
+          <p class="admin-eyebrow">Painel administrativo</p>
+          <h1>Gerenciar editais</h1>
+          <p class="admin-user" data-admin-user></p>
+        </div>
+        <div class="admin-header-actions">
+          <a href="editais.html" target="_blank" rel="noopener noreferrer">Ver p&aacute;gina p&uacute;blica</a>
+          <button class="admin-button admin-button--secondary" type="button" data-admin-logout>Sair</button>
+        </div>
+      </header>
+
+      <div class="admin-notice" data-admin-notice role="status" hidden></div>
+
+      <div class="admin-layout">
+        <section class="admin-panel" aria-labelledby="admin-form-title">
+          <div class="admin-panel-heading">
+            <p class="admin-eyebrow">Publica&ccedil;&atilde;o</p>
+            <h2 id="admin-form-title" data-admin-form-title>Novo edital</h2>
+          </div>
+          <form data-edital-form>
+            <input type="hidden" name="id">
+            <div class="admin-field admin-field--wide">
+              <label for="edital-title">T&iacute;tulo *</label>
+              <input id="edital-title" name="title" required maxlength="180" autocomplete="off">
+            </div>
+            <div class="admin-field admin-field--wide">
+              <label for="edital-description">Descri&ccedil;&atilde;o</label>
+              <textarea id="edital-description" name="description" rows="3" maxlength="500"></textarea>
+            </div>
+            <div class="admin-fields-grid">
+              <div class="admin-field"><label for="edital-category">Categoria</label><input id="edital-category" name="category" maxlength="80"></div>
+              <div class="admin-field"><label for="edital-year">Ano *</label><input id="edital-year" name="year" inputmode="numeric" pattern="[0-9]{4}" required></div>
+              <div class="admin-field"><label for="edital-date">Data de publica&ccedil;&atilde;o</label><input id="edital-date" name="publicationDate" type="date"></div>
+              <div class="admin-field"><label for="edital-status">Situa&ccedil;&atilde;o *</label><select id="edital-status" name="status" required><option value="aberto">Aberto</option><option value="encerrado">Encerrado</option><option value="indisponivel">Documento indispon&iacute;vel</option></select></div>
+            </div>
+            <div class="admin-field admin-field--wide">
+              <label for="edital-file">Enviar PDF para o Google Drive</label>
+              <input id="edital-file" name="file" type="file" accept="application/pdf,.pdf">
+              <small>O painel envia o PDF para a pasta do Drive configurada. Limite: 5 MB. <a href="https://drive.google.com/drive/folders/1Wv5w6RrYodSl6bA15W7sL4eG7XQ-q8h-" target="_blank" rel="noopener noreferrer">Abrir pasta de editais</a>.</small>
+            </div>
+            <div class="admin-field admin-field--wide">
+              <label for="edital-upload-key">Chave de envio do Drive</label>
+              <input id="edital-upload-key" name="uploadKey" type="password" autocomplete="off" placeholder="Chave configurada no Apps Script">
+              <small>Digite a chave definida no script. Ela não é salva no edital.</small>
+            </div>
+            <div class="admin-field admin-field--wide">
+              <label for="edital-url">Link do documento (se já estiver no Drive)</label>
+              <input id="edital-url" name="url" type="url" inputmode="url" placeholder="https://drive.google.com/file/d/.../view">
+              <small>Use este campo se já enviou o PDF manualmente.</small>
+            </div>
+            <div class="admin-form-actions">
+              <button class="admin-button" type="submit" data-admin-submit>Publicar edital</button>
+              <button class="admin-button admin-button--secondary" type="button" data-admin-cancel hidden>Cancelar edi&ccedil;&atilde;o</button>
+            </div>
+          </form>
+        </section>
+
+        <section class="admin-panel" aria-labelledby="admin-list-title">
+          <div class="admin-panel-heading admin-list-heading">
+            <div><p class="admin-eyebrow">Conte&uacute;do publicado</p><h2 id="admin-list-title">Editais cadastrados</h2></div>
+            <span class="admin-count" data-admin-count>0</span>
+          </div>
+          <div class="admin-edital-list" data-admin-list></div>
+          <p class="admin-empty" data-admin-empty hidden>Nenhum edital cadastrado.</p>
+        </section>
+      </div>
+    </section>
+  </main>
+  <script src="js/editais.js" defer></script>
+  <script src="js/google-drive-config.js?v=20261008-3" defer></script>
+  <script src="js/apps-script-api.js?v=20261008-3" defer></script>
+  <script src="js/admin-editais.js?v=20261008-3" defer></script>
+</body>
+</html>

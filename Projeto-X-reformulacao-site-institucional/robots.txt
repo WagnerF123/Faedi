@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /arquivos/editais/README.txt
+Disallow: /arquivos/tcc/README.txt

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Acesso administrativo | FAEDI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/admin-editais.css">
+</head>
+<body class="admin-editais-page admin-login-page">
+  <main class="admin-login-shell">
+    <a class="admin-brand" href="index.html" aria-label="Voltar para a página inicial da FAEDI">FAEDI</a>
+    <section class="admin-login-card" aria-labelledby="admin-login-title">
+      <div class="admin-login-icon" aria-hidden="true">&#128274;</div>
+      <p class="admin-eyebrow">Área restrita</p>
+      <h1 id="admin-login-title">Painel de editais</h1>
+      <p class="admin-login-text">Informe sua senha administrativa para publicar, editar ou remover editais e documentos.</p>
+      <form data-admin-login>
+        <label for="admin-password">Senha administrativa</label>
+        <div class="admin-password-field">
+          <input id="admin-password" name="password" type="password" autocomplete="current-password" required autofocus>
+          <button type="button" class="admin-password-toggle" data-password-toggle aria-label="Mostrar senha">Mostrar</button>
+        </div>
+        <button class="admin-button admin-login-submit" type="submit">Acessar painel</button>
+      </form>
+      <p class="admin-login-feedback" data-login-feedback role="alert" hidden></p>
+      <a class="admin-back-link" href="editais.html">Voltar para os editais públicos</a>
+    </section>
+  </main>
+  <script src="js/acesso-editais.js" defer></script>
+</body>
+</html>

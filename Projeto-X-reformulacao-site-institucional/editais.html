@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editais | Faculdade FAEDI</title>
+  <meta
+    name="description"
+    content="Consulte a área de editais da Faculdade FAEDI e filtre os documentos institucionais por categoria, ano e situação."
+  >
+  <meta property="og:title" content="Editais | Faculdade FAEDI">
+  <meta property="og:description" content="Consulte a área de editais da Faculdade FAEDI e filtre os documentos institucionais por categoria, ano e situação.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/optimized/faedi-social-1200.jpg" data-seo-url>
+  <meta property="og:image:alt" content="Banner institucional da Faculdade FAEDI">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Faculdade FAEDI">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Editais | Faculdade FAEDI">
+  <meta name="twitter:description" content="Consulte a área de editais da Faculdade FAEDI e filtre os documentos institucionais por categoria, ano e situação.">
+  <meta name="twitter:image" content="images/optimized/faedi-social-1200.jpg" data-seo-url>
+  <meta name="twitter:image:alt" content="Banner institucional da Faculdade FAEDI">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Faculdade FAEDI", "item": "index.html" },
+        { "@type": "ListItem", "position": 2, "name": "Editais" }
+      ]
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="css/faedi.css">
+</head>
+<body class="editais-page" data-page="editais">
+  <div data-faedi-layout="header"></div>
+  <div data-faedi-layout="search"></div>
+
+  <main>
+    <section class="editais-hero">
+      <div class="container editais-hero-content">
+        <div class="editais-copy">
+          <span class="editais-kicker">FAEDI | Faculdade de Educa&ccedil;&atilde;o da Ibiapaba</span>
+          <h1>Editais</h1>
+          <p>
+            Consulte os documentos institucionais da FAEDI em uma estrutura organizada por ano, com links prontos para PDF e atualiza&ccedil;&atilde;o r&aacute;pida sempre que um novo arquivo for publicado.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="editais-section" aria-labelledby="editais-list-title">
+      <div class="container">
+        <h2 class="sr-only" id="editais-list-title">Lista de editais</h2>
+        <form class="editais-filters" data-editais-filters>
+          <div class="editais-filter-field">
+            <label for="editais-filter-category">Categoria</label>
+            <select id="editais-filter-category" data-editais-filter="category">
+              <option value="">Todos</option>
+            </select>
+          </div>
+
+          <div class="editais-filter-field">
+            <label for="editais-filter-year">Ano</label>
+            <select id="editais-filter-year" data-editais-filter="year">
+              <option value="">Todos</option>
+            </select>
+          </div>
+
+          <div class="editais-filter-field">
+            <label for="editais-filter-status">Situa&ccedil;&atilde;o</label>
+            <select id="editais-filter-status" data-editais-filter="status">
+              <option value="">Todos</option>
+              <option value="aberto">Aberto</option>
+              <option value="encerrado">Encerrado</option>
+              <option value="indisponivel">Documento indispon&iacute;vel</option>
+            </select>
+          </div>
+        </form>
+
+        <p class="editais-results-status" data-editais-count role="status" aria-live="polite" aria-atomic="true"></p>
+
+        <div class="editais-list" data-editais-list aria-label="Lista de editais"></div>
+
+        <div class="editais-empty" data-editais-empty hidden>
+          <h3>Nenhum edital encontrado</h3>
+          <p>Ajuste os filtros para consultar outros documentos.</p>
+        </div>
+
+        <noscript>
+          <p class="editais-noscript">Ative o JavaScript para consultar e filtrar os editais cadastrados.</p>
+        </noscript>
+
+        <p class="editais-admin-entry">
+          <a class="editais-admin-link" href="acesso-editais.html">&Aacute;rea administrativa</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <div data-faedi-layout="floating"></div>
+  <div data-faedi-layout="footer"></div>
+
+  <script src="js/faedi-layout.js" defer></script>
+  <script src="js/search-index.js" defer></script>
+  <script src="js/faedi.js" defer></script>
+  <script src="js/google-drive-config.js?v=20261008-3" defer></script>
+  <script src="js/apps-script-api.js?v=20261008-3" defer></script>
+  <script src="js/editais.js?v=20261008-3" defer></script>
+</body>
+</html>

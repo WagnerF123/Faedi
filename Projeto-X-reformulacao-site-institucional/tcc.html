@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trabalhos de Conclusão de Curso | Faculdade FAEDI</title>
+  <meta
+    name="description"
+    content="Acesse a área de consulta aos Trabalhos de Conclusão de Curso da Faculdade FAEDI."
+  >
+  <meta property="og:title" content="Trabalhos de Conclusão de Curso | Faculdade FAEDI">
+  <meta property="og:description" content="Acesse a área de consulta aos Trabalhos de Conclusão de Curso da Faculdade FAEDI.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/optimized/faedi-social-1200.jpg" data-seo-url>
+  <meta property="og:image:alt" content="Banner institucional da Faculdade FAEDI">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Faculdade FAEDI">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Trabalhos de Conclusão de Curso | Faculdade FAEDI">
+  <meta name="twitter:description" content="Acesse a área de consulta aos Trabalhos de Conclusão de Curso da Faculdade FAEDI.">
+  <meta name="twitter:image" content="images/optimized/faedi-social-1200.jpg" data-seo-url>
+  <meta name="twitter:image:alt" content="Banner institucional da Faculdade FAEDI">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Faculdade FAEDI", "item": "index.html" },
+        { "@type": "ListItem", "position": 2, "name": "Trabalhos de Conclusão de Curso" }
+      ]
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="css/faedi.css">
+</head>
+<body class="tcc-page" data-page="tcc">
+  <div data-faedi-layout="header"></div>
+  <div data-faedi-layout="search"></div>
+
+  <main>
+    <section class="tcc-hero">
+      <div class="container tcc-hero-content">
+        <div class="tcc-hero-copy">
+          <span class="tcc-kicker">FAEDI | Faculdade de Educa&ccedil;&atilde;o da Ibiapaba</span>
+          <h1>Trabalhos de Conclus&atilde;o de Curso</h1>
+          <p>Consulte os trabalhos acad&ecirc;micos disponibilizados pela Faculdade FAEDI.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="tcc-query" aria-labelledby="tcc-query-title">
+      <div class="container">
+        <h2 class="sr-only" id="tcc-query-title">Consulta de Trabalhos de Conclus&atilde;o de Curso</h2>
+
+        <form class="tcc-filters" data-tcc-filters>
+          <div class="tcc-filter-field tcc-filter-field--search">
+            <label for="tcc-search">Pesquisar</label>
+            <input
+              id="tcc-search"
+              type="search"
+              inputmode="search"
+              autocomplete="off"
+              placeholder="Busque por t&iacute;tulo, autor, orientador ou palavra-chave"
+              data-tcc-search
+            >
+          </div>
+
+          <div class="tcc-filter-field">
+            <label for="tcc-filter-course">Curso</label>
+            <select id="tcc-filter-course" data-tcc-filter="course">
+              <option value="">Todos</option>
+            </select>
+          </div>
+
+          <div class="tcc-filter-field">
+            <label for="tcc-filter-year">Ano</label>
+            <select id="tcc-filter-year" data-tcc-filter="year">
+              <option value="">Todos</option>
+            </select>
+          </div>
+        </form>
+
+        <p class="tcc-results-status" data-tcc-count role="status" aria-live="polite" aria-atomic="true"></p>
+
+        <div class="tcc-list" data-tcc-list aria-label="Lista de Trabalhos de Conclus&atilde;o de Curso"></div>
+
+        <div class="tcc-empty" data-tcc-empty role="status" aria-live="polite" aria-atomic="true">
+          <p>Nenhum trabalho est&aacute; dispon&iacute;vel para consulta no momento.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-faedi-layout="floating"></div>
+  <div data-faedi-layout="footer"></div>
+
+  <script src="js/faedi-layout.js" defer></script>
+  <script src="js/search-index.js" defer></script>
+  <script src="js/faedi.js" defer></script>
+  <script src="js/tcc.js" defer></script>
+</body>
+</html>

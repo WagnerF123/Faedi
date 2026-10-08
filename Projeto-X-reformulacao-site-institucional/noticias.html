@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notícias | Faculdade FAEDI</title>
+  <meta name="description" content="Acompanhe as notícias e novidades acadêmicas, institucionais e comunitárias da Faculdade FAEDI.">
+  <meta property="og:title" content="Notícias | Faculdade FAEDI">
+  <meta property="og:description" content="Acompanhe as notícias e novidades acadêmicas, institucionais e comunitárias da Faculdade FAEDI.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/optimized/faedi-social-1200.jpg" data-seo-url>
+  <meta property="og:image:alt" content="Banner institucional da Faculdade FAEDI">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Faculdade FAEDI">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Notícias | Faculdade FAEDI">
+  <meta name="twitter:description" content="Acompanhe as notícias e novidades acadêmicas, institucionais e comunitárias da Faculdade FAEDI.">
+  <meta name="twitter:image" content="images/optimized/faedi-social-1200.jpg" data-seo-url>
+  <meta name="twitter:image:alt" content="Banner institucional da Faculdade FAEDI">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Faculdade FAEDI", "item": "index.html" },
+        { "@type": "ListItem", "position": 2, "name": "Notícias" }
+      ]
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="css/faedi.css">
+</head>
+<body class="news-page news-list-page" data-page="noticias">
+  <div data-faedi-layout="header"></div>
+  <div data-faedi-layout="search"></div>
+
+  <main class="news-list-main">
+    <section class="noticias-header">
+      <div class="container">
+        <h1>Notícias</h1>
+        <p>Fique por dentro das novidades e acontecimentos da Faculdade FAEDI</p>
+      </div>
+    </section>
+
+    <section class="noticias-container" aria-labelledby="news-list-title">
+      <h2 class="sr-only" id="news-list-title">Lista de notícias</h2>
+      <!-- Filtros de categoria -->
+      <div class="noticias-filtros" role="group" aria-label="Filtrar notícias por categoria">
+        <button type="button" class="filtro-btn active" data-category="all" aria-pressed="true">Todas</button>
+        <button type="button" class="filtro-btn" data-category="academico" aria-pressed="false">Acadêmico</button>
+        <button type="button" class="filtro-btn" data-category="eventos" aria-pressed="false">Eventos</button>
+        <button type="button" class="filtro-btn" data-category="comunidade" aria-pressed="false">Comunidade</button>
+        <button type="button" class="filtro-btn" data-category="inovacao" aria-pressed="false">Inovação</button>
+      </div>
+
+      <!-- Destaques principais -->
+      <div class="noticia-destaque" data-featured-news>
+        <a href="noticia.html?id=1" class="noticia-card noticia-card--editorial" data-category="academico">
+          <picture class="noticia-card-picture">
+            <source
+              type="image/webp"
+              srcset="images/optimized/banner-secundario-768.webp 768w, images/optimized/banner-secundario-1280.webp 1280w"
+              sizes="(max-width: 900px) calc(100vw - 2rem), 760px"
+            >
+            <img class="noticia-card-image noticia-card-image--editorial" src="images/banner-secundario.png" alt="" width="8000" height="3431" loading="lazy" decoding="async">
+          </picture>
+          <div class="noticia-card-content">
+            <h3>FAEDI lança novo programa de bolsas de estudo para alunos de baixa renda</h3>
+            <div class="noticia-data">
+              <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+              <span>15 de abril de 2026</span>
+            </div>
+            <p>A Faculdade FAEDI anuncia a implementação de um programa inovador de bolsas de estudo, visando democratizar o acesso ao ensino superior de qualidade na região de Ipu. O programa oferece condições especiais para estudantes que demonstram necessidade financeira e compromisso acadêmico.</p>
+          </div>
+        </a>
+
+        <a href="noticia.html?id=2" class="noticia-card noticia-card--brand" data-category="eventos">
+          <img class="noticia-card-image noticia-card-image--brand" src="images/logo-faedi.png" alt="" width="484" height="181" loading="lazy" decoding="async">
+          <div class="noticia-card-content">
+            <h3>Workshop reúne estudantes e empresários para discutir mercado de trabalho</h3>
+            <div class="noticia-data">
+              <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+              <span>12 de abril de 2026</span>
+            </div>
+            <p>Evento promoveu networking e troca de experiências entre alunos e profissionais da região.</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Grade de notícias -->
+      <div class="noticias-grid">
+        <a href="noticia.html?id=3" class="noticia-card noticia-card--brand" data-category="academico">
+          <img class="noticia-card-image noticia-card-image--brand" src="images/logo-faedi.png" alt="" width="484" height="181" loading="lazy" decoding="async">
+          <div class="noticia-card-content">
+            <h3>Novo laboratório de odontologia é inaugurado com equipamentos de ponta</h3>
+            <div class="noticia-data">
+              <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+              <span>10 de abril de 2026</span>
+            </div>
+            <p>Investimento de R$ 500 mil em tecnologia para formação prática dos estudantes de Odontologia.</p>
+          </div>
+        </a>
+
+        <a href="noticia.html?id=4" class="noticia-card noticia-card--brand" data-category="eventos">
+          <img class="noticia-card-image noticia-card-image--brand" src="images/logo-faedi.png" alt="" width="484" height="181" loading="lazy" decoding="async">
+          <div class="noticia-card-content">
+            <h3>FAEDI participa de feira educacional em Fortaleza</h3>
+            <div class="noticia-data">
+              <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+              <span>8 de abril de 2026</span>
+            </div>
+            <p>Instituição apresentou seus cursos e oportunidades de ingresso para milhares de visitantes.</p>
+          </div>
+        </a>
+
+        <a href="noticia.html?id=5" class="noticia-card noticia-card--brand" data-category="comunidade">
+          <img class="noticia-card-image noticia-card-image--brand" src="images/logo-faedi.png" alt="" width="484" height="181" loading="lazy" decoding="async">
+          <div class="noticia-card-content">
+            <h3>Projeto de extensão beneficia comunidade local com atendimento gratuito</h3>
+            <div class="noticia-data">
+              <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+              <span>5 de abril de 2026</span>
+            </div>
+            <p>Estudantes de Enfermagem e Odontologia oferecem serviços à população de Ipu.</p>
+          </div>
+        </a>
+
+        <a href="noticia.html?id=6" class="noticia-card noticia-card--brand" data-category="inovacao">
+          <img class="noticia-card-image noticia-card-image--brand" src="images/logo-faedi.png" alt="" width="484" height="181" loading="lazy" decoding="async">
+          <div class="noticia-card-content">
+            <h3>FAEDI implementa nova plataforma digital para aulas interativas</h3>
+            <div class="noticia-data">
+              <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+              <span>3 de abril de 2026</span>
+            </div>
+            <p>Tecnologia inovadora permite aulas mais dinâmicas e participação ativa dos estudantes.</p>
+          </div>
+        </a>
+
+        <a href="noticia.html?id=7" class="noticia-card noticia-card--brand" data-category="academico">
+          <img class="noticia-card-image noticia-card-image--brand" src="images/logo-faedi.png" alt="" width="484" height="181" loading="lazy" decoding="async">
+          <div class="noticia-card-content">
+            <h3>Grupo de pesquisa da FAEDI publica artigo em revista internacional</h3>
+            <div class="noticia-data">
+              <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+              <span>1 de abril de 2026</span>
+            </div>
+            <p>Trabalho sobre saúde mental ganha reconhecimento da comunidade científica.</p>
+          </div>
+        </a>
+
+        <a href="noticia.html?id=8" class="noticia-card noticia-card--brand" data-category="eventos">
+          <img class="noticia-card-image noticia-card-image--brand" src="images/logo-faedi.png" alt="" width="484" height="181" loading="lazy" decoding="async">
+          <div class="noticia-card-content">
+            <h3>Semana acadêmica reúne palestrantes renomados</h3>
+            <div class="noticia-data">
+              <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+              <span>28 de março de 2026</span>
+            </div>
+            <p>Evento contou com participação de especialistas em diversas áreas do conhecimento.</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Paginação -->
+      <nav class="noticias-paginacao" aria-label="Paginação de notícias">
+        <button type="button" class="pagina-btn active" disabled>1</button>
+        <button type="button" class="pagina-btn" disabled>2</button>
+        <button type="button" class="pagina-btn" disabled>3</button>
+        <span class="paginacao-ellipsis" aria-hidden="true">...</span>
+        <button type="button" class="pagina-btn" disabled>Próxima →</button>
+      </nav>
+    </section>
+  </main>
+
+  <div data-faedi-layout="floating"></div>
+  <div data-faedi-layout="footer"></div>
+
+  <script src="js/faedi-layout.js" defer></script>
+  <script src="js/search-index.js" defer></script>
+  <script src="js/faedi.js" defer></script>
+  <script>
+    // Funcionalidade dos filtros
+    document.addEventListener('DOMContentLoaded', function() {
+      const filtroBtns = document.querySelectorAll('.news-list-page .filtro-btn');
+      const noticiaCards = document.querySelectorAll('.news-list-page .noticia-card[data-category]');
+      const destaqueContainer = document.querySelector('.news-list-page [data-featured-news]');
+      const destaqueCards = destaqueContainer ? destaqueContainer.querySelectorAll('.noticia-card[data-category]') : [];
+
+      filtroBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          const category = this.getAttribute('data-category');
+
+          filtroBtns.forEach(button => {
+            const isActive = button === this;
+            button.classList.toggle('active', isActive);
+            button.setAttribute('aria-pressed', String(isActive));
+          });
+
+          noticiaCards.forEach(card => {
+            card.hidden = category !== 'all' && card.getAttribute('data-category') !== category;
+          });
+
+          if (destaqueContainer) {
+            const visibleHighlights = Array.from(destaqueCards).filter(card => !card.hidden).length;
+            destaqueContainer.hidden = visibleHighlights === 0;
+            destaqueContainer.classList.toggle('has-single-card', visibleHighlights === 1);
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
